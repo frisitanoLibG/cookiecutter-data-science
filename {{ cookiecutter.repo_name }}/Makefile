@@ -53,7 +53,7 @@ endif
 create_environment:
 ifeq (True,$(HAS_CONDA))
 	@echo ">>> Detected conda, creating conda environment."
-	conda create --name $(PROJECT_NAME) -f environment.yml
+	conda create -f environment.yml
 	@echo ">>> New conda env created. Activate with:\nsource activate $(PROJECT_NAME)"
 else
 	@echo ">>> Please install conda"
